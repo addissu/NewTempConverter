@@ -85,7 +85,24 @@
         android:text="Convert"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.625"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/celsiusEditText"
-        app:layout_constraintVertical_bias="0.521" />
+        app:layout_constraintVertical_bias="0.631" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="353dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:max="120"
+        android:progress="98"
+        app:layout_constraintBottom_toTopOf="@+id/celsiusEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fahrenheitEditText" />
+
 </android.support.constraint.ConstraintLayout>
