@@ -1,5 +1,8 @@
 package com.example.addissutamru.tempconverter;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -7,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -73,6 +77,17 @@ public class MainActivity extends AppCompatActivity {
            }
        });
 
+    }
+
+    public void displaySettings(View view){
+        //start settings activity
+        startActivity(new Intent(this,SettingsActivity.class));
+    }
+    public void readSettings(View view){
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        String setting1 = prefs.getString("example_text", "John Smith");
+
+        Toast.makeText(this, setting1,Toast.LENGTH_LONG).show();
     }
 
 
